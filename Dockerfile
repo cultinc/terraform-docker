@@ -1,8 +1,8 @@
-FROM alpine:3.6
+FROM alpine:3.7
 LABEL maintainer "Kazuya Hara"
 
-ENV AWSCIL_VERSION=1.14.4
-ENV TERRAFORM_VERSION=0.11.1
+ENV AWSCIL_VERSION=1.14.22
+ENV TERRAFORM_VERSION=0.11.2
 
 RUN apk add -v --update python py-pip curl && \
     curl https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip > terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
